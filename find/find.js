@@ -3,7 +3,7 @@ let home = document.getElementById("home")
 
 home.addEventListener("click", () => {
 
-    window.location = "../E-commerce.html"
+    window.location = "../index.html"
 
 })
 var map = L.map('map').setView([34.761923, 36.078265

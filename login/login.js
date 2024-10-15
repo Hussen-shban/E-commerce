@@ -51,7 +51,7 @@ function fooorm() {
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user))
 
-      window.location="../E-commerce.html"
+      window.location="../index.html"
     })
     .catch(function (error) {
 

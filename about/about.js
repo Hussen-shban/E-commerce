@@ -8,7 +8,7 @@ console.log(we)
 
 home.addEventListener("click",()=>{
 
-window.location="../E-commerce.html"
+window.location="../index.html"
 
 })
 
