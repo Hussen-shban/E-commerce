@@ -510,11 +510,12 @@ body {
   transform-style: preserve-3d;
 }
 .container .gallery .box {
+  will-change: transform;
   position: relative;
   width: 200px;
   height: 200px;
   transform-style: preserve-3d;
-  transition: 1.5s;
+  transition: 1s;
   transform: perspective(1000px) rotateY(0deg);
 }
 .container .gallery .box span {
@@ -526,7 +527,6 @@ body {
   transform-origin: center;
   transform-style: preserve-3d;
   transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
-  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2666666667));
 }
 .container .gallery .box span img {
   position: absolute;
@@ -574,6 +574,10 @@ body {
 }
 .container .gallery .btns .btn.prev::before {
   transform: rotate(225deg) translate(-2.5px, 2.5px);
+}
+
+.swal2-title {
+  color: red !important;
 }
 
 @media (max-width: 500px) {
@@ -931,7 +935,6 @@ body {
     transform-origin: center;
     transform-style: preserve-3d;
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(180px);
-    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2666666667));
   }
   .container .gallery .box span img {
     position: absolute;

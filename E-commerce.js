@@ -88,9 +88,6 @@ out1.addEventListener("click", () => {
 })
 
 
-
-
-
 const token = localStorage.getItem("token")
 
 function show() {

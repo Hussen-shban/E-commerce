@@ -668,11 +668,12 @@ body {
         transform-style: preserve-3d;
 
         .box {
+            will-change: transform;
             position: relative;
             width: 200px;
             height: 200px;
             transform-style: preserve-3d;
-            transition: 1.5s;
+            transition: 1s;
             transform: perspective(1000px) rotateY(0deg);
 
             span {
@@ -684,7 +685,7 @@ body {
                 transform-origin: center;
                 transform-style: preserve-3d;
                 transform: rotateY(calc(var(--i)*45deg)) translateZ(300px);
-                -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+                // -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
 
                 img {
                     position: absolute;
@@ -750,7 +751,7 @@ body {
 
 
 .swal2-title {
-    color: red !important; /* يمكنك تغيير اللون إلى أي لون تريده */
+    color: red !important;
 }
 
 
@@ -1254,7 +1255,7 @@ body {
                     transform-origin: center;
                     transform-style: preserve-3d;
                     transform: rotateY(calc(var(--i)*45deg)) translateZ(180px);
-                    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+                    // -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
 
                     img {
                         position: absolute;
