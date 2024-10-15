@@ -164,8 +164,10 @@ function shop() {
                 });
                 Toast.fire({
                     icon: "error",
-
-                    title: "You must log in first."
+                    title: "You must log in first.",
+                    customClass: {
+                        title: 'swal2-title' // تطبيق CSS مخصص على العنوان
+                    }
                 });
 
             })
