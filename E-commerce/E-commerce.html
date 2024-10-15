@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="E-commerce.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+
+
+    <div class="dashboard">
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg class="logo" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 595.28 841.89">
+            <path
+                d="M350.23,420.36c5.84-.88,10.95-1.34,15.92-2.45,9.34-2.09,12.6-6.09,12.73-15.73,.19-14.33,.07-28.67,.08-43,0-10.33,.07-20.67-.02-31-.08-9.32-3.74-13.33-12.98-14.46-2.31-.28-4.68-.27-6.95-.74-.88-.18-1.56-1.32-2.33-2.03,.83-.65,1.57-1.47,2.5-1.88,.7-.31,1.64-.1,2.47-.1,21,0,42,0,63,0,.83,0,1.75-.18,2.48,.12,1.08,.44,2.02,1.22,3.03,1.85-.92,.72-1.76,1.89-2.79,2.09-2.77,.54-5.65,.5-8.43,.99-6.93,1.21-10.46,5.25-10.91,12.25-.06,1-.04,2-.04,3,0,63.17,0,126.33,.01,189.5,0,12.35,3.78,16.26,16.3,16.96,.33,.02,.71-.07,.99,.06,1.61,.74,3.2,1.52,4.8,2.29-1.63,.64-3.25,1.84-4.88,1.85-21.33,.12-42.67,.11-64,0-1.5,0-3-1.13-4.5-1.74,1.57-.8,3.06-1.84,4.72-2.33,1.56-.45,3.32-.21,4.96-.45,8.98-1.35,12.48-5.28,12.55-14.4,.09-11.5,.02-23,.02-34.5,0-15.33,.04-30.67-.01-46-.04-11.1-2.6-14.45-13.42-17.18-4.79-1.21-9.71-1.9-15.3-2.96Z" />
+            <path
+                d="M302.79,507.95c.26-1.71,.47-3.43,.8-5.13,3.78-19.56-2.06-35.91-17.93-47.64-9.69-7.17-20.62-12.74-31.27-18.53-17.23-9.37-35.13-17.58-51.9-27.68-13.76-8.29-23.46-20.76-26.91-36.99-4.1-19.22-.72-36.72,12.9-51.62,1.22-1.33,1.94-3.11,2.89-4.68,.36,.41,.73,.81,1.09,1.22-1.78,5.41-4.23,10.7-5.21,16.25-2.85,16.14,2.19,30.06,15.1,39.91,9.72,7.41,20.46,13.67,31.29,19.39,17.49,9.25,35.93,16.62,52.19,28.25,33.82,24.2,30.81,62.76,19.01,85.62-.35,.67-.83,1.27-1.26,1.91-.27-.09-.53-.19-.8-.28Zm2.43-43.11c-.2-1.58-.32-3.18-.62-4.73-3.06-15.52-12.15-27.23-25.2-35.09-15.78-9.5-32.4-17.62-48.8-26.06-19.88-10.23-39.83-20.27-49.4-43.78-.11,2.08-.19,2.9-.18,3.72,.15,19.13,9.08,33.82,24.64,43.77,13.82,8.83,28.56,16.33,43.31,23.57,20.6,10.11,41.94,18.93,56.25,38.6Z" />
+            <path
+                d="M275.7,531.95c-20.09,8.71-40.72,10.87-61.76,4.41-13.79-4.23-25.68-11.71-35.41-22.48-7.25-8.02-11.64-17.41-13.15-28.06-1.57-11.08,4.13-19.07,13.37-19.48,6.21-.27,10.16,2.96,12.57,8.09,1.75,3.72,2.83,7.79,3.92,11.79,4.21,15.43,10,30.04,24.93,38.16,16.77,9.13,34.81,11.83,53.67,8.01,.62-.13,1.24-.3,1.86-.44Z" />
+            <path
+                d="M223.59,303.74c22.75-4.81,43.79-.78,62.95,12.36,11.92,8.17,20.97,18.63,23.97,33.13,.87,4.22,.73,9.06-.41,13.21-2.75,10.02-15.62,12.7-22.1,4.58-2.79-3.49-4.26-8.13-5.9-12.41-3.42-8.95-5.4-18.68-10.06-26.89-9.37-16.51-25.18-22.9-43.56-23.75-1.63-.08-3.26-.14-4.89-.22Z" />
+        </svg>
+
+
+        <ul>
+
+            <li class="dash" id="dash">
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+
+            <li id="no1" class="none"><a id="womenpage" href="#">Women's clothing
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M12 2.75a6.25 6.25 0 1 0 0 12.5a6.25 6.25 0 0 0 0-12.5M4.25 9a7.75 7.75 0 1 1 8.5 7.714v1.036h1.75a.75.75 0 0 1 0 1.5h-1.75V22a.75.75 0 1 1-1.5 0v-2.75H9.5a.75.75 0 0 1 0-1.5h1.75v-1.036A7.75 7.75 0 0 1 4.25 9"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li id="no2" class="none"><a id="menpage" href="#">Men's clothing
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <g fill="none">
+                            <circle cx="10" cy="14" r="8" stroke="currentColor" stroke-width="1.5" />
+                            <path fill="currentColor"
+                                d="M22 2h.75a.75.75 0 0 0-.75-.75zm-.75 5a.75.75 0 0 0 1.5 0zM17 1.25a.75.75 0 0 0 0 1.5zm-.97 7.78l6.5-6.5l-1.06-1.06l-6.5 6.5zM21.25 2v5h1.5V2zM17 2.75h5v-1.5h-5z" />
+                        </g>
+                    </svg>
+                </a></li>
+            <li id="no3" class="none"><a href="./account/account.html">Account
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047a9.005 9.005 0 0 1 5.9 8.181a.75.75 0 1 1-1.499.044a7.5 7.5 0 0 0-14.993 0a.75.75 0 0 1-1.5-.045a9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5M8 8a4 4 0 1 0 8 0a4 4 0 0 0-8 0" />
+                    </svg>
+                </a></li>
+            <li id="no4" class="none">
+                <a href="./cart/cart.html"> Cart
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                        <path fill="currentColor"
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607L1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4a2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2a1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2" />
+                    </svg>
+                </a>
+<div id="catrq" class="catrq">5</div>
+            </li>
+
+            <li id="no5" class="none"><a id="out1" href="#" style="color: red;"> Log out
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                        <path fill="#ff0000"
+                            d="M4 20V4h8.02v1H5v14h7.02v1zm12.462-4.461l-.702-.72l2.319-2.319H9.192v-1h8.887l-2.32-2.32l.702-.718L20 12z" />
+                    </svg>
+                </a></li>
+
+
+
+            <li id="non1" class="none"><a href="./find/find.html"> Find a Store</a></li>
+            <li id="non2" class="none"><a href="./about/about.html"> About Us</a></li>
+            <li id="non3" class="none"><a href="./sign-up/sign-up.html">Join Us</a></li>
+            <li id="non4" class="none"><a href="./login/login.html">Sign In</a></li>
+
+
+        </ul>
+
+
+
+    </div>
+    <div id="extension" class="extension">
+        <div id="close" class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="black"
+                    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
+            </svg>
+        </div>
+
+        <div class="list">
+            <ul>
+                <div class="find">
+                    <div id="none1">
+                        <li> <a href="../E-commerce/find/find.html">Find a Store</a></li>
+                        <li> <a href="../E-commerce/about/about.html">About Us</a></li>
+                    </div>
+
+
+                    <div id="none2" class="none2">
+                        <li id="womenpage" class="none"><a href="#">Women's clothing
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M12 2.75a6.25 6.25 0 1 0 0 12.5a6.25 6.25 0 0 0 0-12.5M4.25 9a7.75 7.75 0 1 1 8.5 7.714v1.036h1.75a.75.75 0 0 1 0 1.5h-1.75V22a.75.75 0 1 1-1.5 0v-2.75H9.5a.75.75 0 0 1 0-1.5h1.75v-1.036A7.75 7.75 0 0 1 4.25 9"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a></li>
+                        <li id="menpage" class="none"><a href="#">Men's clothing
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <circle cx="10" cy="14" r="8" stroke="currentColor" stroke-width="1.5" />
+                                        <path fill="currentColor"
+                                            d="M22 2h.75a.75.75 0 0 0-.75-.75zm-.75 5a.75.75 0 0 0 1.5 0zM17 1.25a.75.75 0 0 0 0 1.5zm-.97 7.78l6.5-6.5l-1.06-1.06l-6.5 6.5zM21.25 2v5h1.5V2zM17 2.75h5v-1.5h-5z" />
+                                    </g>
+                                </svg>
+                            </a></li>
+                        <li class="none"><a href="./account/account.html">Account
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047a9.005 9.005 0 0 1 5.9 8.181a.75.75 0 1 1-1.499.044a7.5 7.5 0 0 0-14.993 0a.75.75 0 0 1-1.5-.045a9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5M8 8a4 4 0 1 0 8 0a4 4 0 0 0-8 0" />
+                                </svg>
+                            </a></li>
+                        <li id="cartee" class="none">
+                            <a href="../E-commerce/cart/cart.html"> Cart
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607L1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4a2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2a1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2" />
+                                </svg>
+                            </a>
+                            <div id="catrqq" class="catrqq">5</div>
+
+                        </li>
+                        <li class="none"><a href="./E-commerce.html">Home
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M19.5 10a.5.5 0 0 0-1 0zm-14 0a.5.5 0 0 0-1 0zm15.146 2.354a.5.5 0 0 0 .708-.708zM12 3l.354-.354a.5.5 0 0 0-.708 0zm-9.354 8.646a.5.5 0 0 0 .708.708zM7 21.5h10v-1H7zM19.5 19v-9h-1v9zm-14 0v-9h-1v9zm15.854-7.354l-9-9l-.708.708l9 9zm-9.708-9l-9 9l.708.708l9-9zM17 21.5a2.5 2.5 0 0 0 2.5-2.5h-1a1.5 1.5 0 0 1-1.5 1.5zm-10-1A1.5 1.5 0 0 1 5.5 19h-1A2.5 2.5 0 0 0 7 21.5z"/></svg>                        </a>
+                        </li>
+                    </div>
+
+                    <div id="find-icon2" class="find-icon2">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path fill="black" fill-rule="evenodd"
+                                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m0-1.2a8.8 8.8 0 1 0 0-17.6a8.8 8.8 0 0 0 0 17.6M9 9.707C9.077 8.2 10.081 7 12.042 7C13.8 7 15 8.088 15 9.526c0 1.095-.565 1.87-1.458 2.407c-.886.523-1.137.914-1.137 1.646v.454h-1.221v-.642c-.007-.921.44-1.55 1.395-2.121c.81-.496 1.123-.935 1.123-1.682c0-.865-.67-1.5-1.709-1.5c-1.053 0-1.723.621-1.8 1.619zm2.798 7.507a.786.786 0 0 1-.796-.795c0-.454.35-.796.796-.796c.453 0 .795.342.795.796a.78.78 0 0 1-.795.795" />
+                            </svg>
+                            <a href="./about/about.html"> <span>About Us</span></a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+                                <path fill="black" d="M28 30H16v-8h-2v8H8v-8H6v8a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2v-8h-2Z"
+                                    class="clr-i-outline clr-i-outline-path-1" />
+                                <path fill="black"
+                                    d="m33.79 13.27l-4.08-8.16A2 2 0 0 0 27.92 4H8.08a2 2 0 0 0-1.79 1.11l-4.08 8.16a2 2 0 0 0-.21.9v3.08a2 2 0 0 0 .46 1.28A4.67 4.67 0 0 0 6 20.13a4.72 4.72 0 0 0 3-1.07a4.73 4.73 0 0 0 6 0a4.73 4.73 0 0 0 6 0a4.73 4.73 0 0 0 6 0a4.72 4.72 0 0 0 6.53-.52a2 2 0 0 0 .47-1.28v-3.09a2 2 0 0 0-.21-.9M30 18.13A2.68 2.68 0 0 1 27.82 17L27 15.88L26.19 17a2.71 2.71 0 0 1-4.37 0L21 15.88L20.19 17a2.71 2.71 0 0 1-4.37 0L15 15.88L14.19 17a2.71 2.71 0 0 1-4.37 0L9 15.88L8.18 17A2.68 2.68 0 0 1 6 18.13a2.64 2.64 0 0 1-2-.88v-3.08L8.08 6h19.84L32 14.16v3.06a2.67 2.67 0 0 1-2 .91"
+                                    class="clr-i-outline clr-i-outline-path-2" />
+                                <path fill="none" d="M0 0h36v36H0z" />
+                            </svg>
+                            <a href="../E-commerce/find/find.html"><span>Find a Store</span></a>
+                        </li>
+                    </div>
+                    <div id="out" class="out">
+                        <li>
+                            <button>log out</button>
+                        </li>
+                    </div>
+
+
+
+
+                </div>
+                <div id="text" class="text">
+                    <li>
+                        <p>Become a SH Member for the best products</p>
+                    </li>
+                </div>
+                <div id="butt" class="butt">
+                    <li>
+                        <button id="join-us">join us</button>
+                        <button id="sign-in">sign in</button>
+                    </li>
+                </div>
+                <div id="find-icon" class="find-icon">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="black" fill-rule="evenodd"
+                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m0-1.2a8.8 8.8 0 1 0 0-17.6a8.8 8.8 0 0 0 0 17.6M9 9.707C9.077 8.2 10.081 7 12.042 7C13.8 7 15 8.088 15 9.526c0 1.095-.565 1.87-1.458 2.407c-.886.523-1.137.914-1.137 1.646v.454h-1.221v-.642c-.007-.921.44-1.55 1.395-2.121c.81-.496 1.123-.935 1.123-1.682c0-.865-.67-1.5-1.709-1.5c-1.053 0-1.723.621-1.8 1.619zm2.798 7.507a.786.786 0 0 1-.796-.795c0-.454.35-.796.796-.796c.453 0 .795.342.795.796a.78.78 0 0 1-.795.795" />
+                        </svg>
+                        <a href="#"> <span>Help</span></a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+                            <path fill="black" d="M28 30H16v-8h-2v8H8v-8H6v8a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2v-8h-2Z"
+                                class="clr-i-outline clr-i-outline-path-1" />
+                            <path fill="black"
+                                d="m33.79 13.27l-4.08-8.16A2 2 0 0 0 27.92 4H8.08a2 2 0 0 0-1.79 1.11l-4.08 8.16a2 2 0 0 0-.21.9v3.08a2 2 0 0 0 .46 1.28A4.67 4.67 0 0 0 6 20.13a4.72 4.72 0 0 0 3-1.07a4.73 4.73 0 0 0 6 0a4.73 4.73 0 0 0 6 0a4.73 4.73 0 0 0 6 0a4.72 4.72 0 0 0 6.53-.52a2 2 0 0 0 .47-1.28v-3.09a2 2 0 0 0-.21-.9M30 18.13A2.68 2.68 0 0 1 27.82 17L27 15.88L26.19 17a2.71 2.71 0 0 1-4.37 0L21 15.88L20.19 17a2.71 2.71 0 0 1-4.37 0L15 15.88L14.19 17a2.71 2.71 0 0 1-4.37 0L9 15.88L8.18 17A2.68 2.68 0 0 1 6 18.13a2.64 2.64 0 0 1-2-.88v-3.08L8.08 6h19.84L32 14.16v3.06a2.67 2.67 0 0 1-2 .91"
+                                class="clr-i-outline clr-i-outline-path-2" />
+                            <path fill="none" d="M0 0h36v36H0z" />
+                        </svg>
+                        <a href="../E-commerce/find/find.html"><span>Find a Store</span></a>
+                    </li>
+                </div>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+    <div id="blur"></div>
+
+    <div class="container">
+        <div class="beginning" data-aos="fade-up ">
+            <img src="https://static.arrajol.com/styles/693x433/public/2018/08/19/181506-%D9%85%D8%A7%20%D8%A7%D9%84%D9%81%D8%A7%D8%B1%D9%82%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A8%D8%B3%20%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9%20%D9%88%D8%B4%D8%A8%D9%87%20%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9%D8%9F.png"
+                alt="">
+            <P class="start-step">SH DUNK</P>
+            <P class="center-step">STEP UP FOR <br>YPUR CITY</P>
+            <P class="end-step"> asperiores adipisci quas voluptatibus. Ad, odit!</P>
+            <input id="aboutone" type="button" value="About Us">
+        </div>
+        <div class="center" data-aos="fade-up ">
+
+            <div>
+                <div data-aos="fade-up " class="start-center">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/548.jpg" alt="">
+
+                    <p>
+                        Fist of the week <br> The Style Sport
+                        <button id="btn-women">shop</button>
+
+
+                    </p>
+                </div>
+
+                <div data-aos="fade-up " class="center-center">
+
+                    <img src="https://c.wallhere.com/photos/36/d5/light_portrait_italy_woman_white_black_sexy_art-542523.jpg!d"
+                        alt="">
+                    <p>
+                        Fist of the week <br> The Style Sport
+                        <button id="btn-women">shop</button>
+
+                    </p>
+
+                </div>
+            </div>
+
+            <div>
+                <div data-aos="fade-up " class="end-center">
+                    <img src="https://c0.wallpaperflare.com/preview/943/148/889/nike-air-jordan-1-shoes-near-chain-link-fence.jpg"
+                        alt="">
+                    <p>
+                        Fist of the week <br> The Style Sport
+                        <button id="btn-men">shop</button>
+
+                    </p>
+
+                </div>
+
+                <div data-aos="fade-up " class="end--center">
+                    <img src="https://media.gettyimages.com/id/1213297871/photo/young-couple-walking-in-the-street.jpg?s=2048x2048&w=gi&k=20&c=EEaupKqXPIb0ZBIGlbYcehjSJQO-Oi_fwH4R3eBav_4="
+                        alt="">
+                    <p>
+                        Fist of the week <br> The Style Sport
+                        <button id="btn-men">shop</button>
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="box">
+                <span style="--i:1"><img src="https://plus.unsplash.com/premium_photo-1675186049222-0b5018db6ce9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdGhlc3xlbnwwfHwwfHx8MA%3D%3D" alt=""></span>
+                <span style="--i:2"><img src="https://images.unsplash.com/photo-1524275539700-cf51138f679b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNsb3RoZXN8ZW58MHx8MHx8fDA%3D" alt=""></span>
+                <span style="--i:8"><img src="https://img.freepik.com/premium-photo/woman-fashion-dress-4k-8k-wallpaper-background-ultra-hd-wallpapers-uhd_882954-51829.jpg?w=740" alt=""></span>
+                <span style="--i:4"><img src="https://plus.unsplash.com/premium_photo-1673125287084-e90996bad505?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2xvdGhlc3xlbnwwfHwwfHx8MA%3D%3D" alt=""></span>
+                <span style="--i:5"><img src="https://images.unsplash.com/photo-1524282745852-a463fa495a7f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNsb3RoZXN8ZW58MHx8MHx8fDA%3D" alt=""></span>
+                <span style="--i:6"><img src="https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2xvdGhlc3xlbnwwfHwwfHx8MA%3D%3D" alt=""></span>
+                <span style="--i:7"><img src="https://images2.alphacoders.com/999/thumbbig-999227.webp" alt=""></span>
+                <span style="--i:3"><img src="https://images8.alphacoders.com/999/thumb-1920-999231.jpg" alt=""></span>
+
+            </div>
+            <div class="btns">
+                <div class="btn prev"></div>
+                <div class="btn next"></div>
+
+            </div>
+        </div>
+
+        <div class="footer" data-aos="fade-up ">
+            <p>Shop By Classics</p>
+
+            <swiper-container class="mySwiper" space-between="30" slides-per-view="auto" pagination="true"
+                pagination-clickable="true">
+                <swiper-slide><img
+                        src="https://images.pexels.com/photos/1670766/pexels-photo-1670766.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                        alt=""></swiper-slide>
+                <swiper-slide><img
+                        src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt=""></swiper-slide>
+                <swiper-slide><img
+                        src="https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt=""></swiper-slide>
+                <swiper-slide><img
+                        src="https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt=""></swiper-slide>
+                <swiper-slide><img
+                        src="https://images.pexels.com/photos/1240892/pexels-photo-1240892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt=""></swiper-slide>
+                <swiper-slide><img
+                        src="https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt=""></swiper-slide>
+            </swiper-container>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
+
+        </div>
+
+        <div class="finally" data-aos="fade-up ">
+
+            <div class="finally-1">
+                <div data-aos="fade-up " class="pp">
+                    <p>Accepted payments</p>
+                    <div class="svg">
+                        <div>
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64"><path fill="currentColor" d="M32.189 17.601c4.822 0 8.729-3.907 8.729-8.723A8.725 8.725 0 0 0 32.189.153a8.726 8.726 0 0 0-8.727 8.725c0 4.816 3.909 8.723 8.727 8.723m11.515 2.658c6.178 0 11.235 5.006 11.235 11.178v27.061c0 2.111-1.66 3.823-3.772 3.823a3.82 3.82 0 0 1-3.819-3.823V34.101h-3.196v29.538H20.36V34.101h-3.164v24.397a3.82 3.82 0 0 1-3.817 3.823c-2.107 0-3.77-1.712-3.77-3.823V31.437c0-6.172 5.508-11.178 11.684-11.178zM29.042 51.877c-.294-.31-.452-.664-.425-1.317c.026-.585.237-.865.536-1.134c.581-.524.781-1.52.781-2.335c0-1.607-1.379-2.903-3.096-2.903c-1.445 0-2.765 1.3-3.202 2.137c-.336.671-.782 2.017-.833 3.595c-.049 1.488.22 2.692.572 3.91c.48 1.327 1.776 2.835 3.462 2.835c1.717 0 3.096-1.3 3.096-2.904c0-.273-.019-.508-.124-.782c-.094-.275-.496-.812-.769-1.103zm5.694 1.103c-.1.274-.13.509-.13.782c0 1.603 1.392 2.904 3.106 2.904c1.678 0 2.982-1.509 3.467-2.835c.352-1.219.617-2.423.563-3.911c-.047-1.577-.501-2.925-.83-3.595c-.435-.837-1.759-2.137-3.2-2.137c-1.714 0-3.106 1.296-3.106 2.903c0 .815.215 1.811.794 2.335c.297.269.508.549.536 1.133c.021.653-.139 1.008-.425 1.317c-.281.289-.676.827-.776 1.102z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3.09em" height="1em" viewBox="0 0 256 83">
+                                <defs>
+                                    <linearGradient id="logosVisa0" x1="45.974%" x2="54.877%" y1="-2.006%" y2="100%">
+                                        <stop offset="0%" stop-color="#222357" />
+                                        <stop offset="100%" stop-color="#254aa5" />
+                                    </linearGradient>
+                                </defs>
+                                <path fill="url(#logosVisa0)"
+                                    d="M132.397 56.24c-.146-11.516 10.263-17.942 18.104-21.763c8.056-3.92 10.762-6.434 10.73-9.94c-.06-5.365-6.426-7.733-12.383-7.825c-10.393-.161-16.436 2.806-21.24 5.05l-3.744-17.519c4.82-2.221 13.745-4.158 23-4.243c21.725 0 35.938 10.724 36.015 27.351c.085 21.102-29.188 22.27-28.988 31.702c.069 2.86 2.798 5.912 8.778 6.688c2.96.392 11.131.692 20.395-3.574l3.636 16.95c-4.982 1.814-11.385 3.551-19.357 3.551c-20.448 0-34.83-10.87-34.946-26.428m89.241 24.968c-3.967 0-7.31-2.314-8.802-5.865L181.803 1.245h21.709l4.32 11.939h26.528l2.506-11.939H256l-16.697 79.963zm3.037-21.601l6.265-30.027h-17.158zm-118.599 21.6L88.964 1.246h20.687l17.104 79.963zm-30.603 0L53.941 26.782l-8.71 46.277c-1.022 5.166-5.058 8.149-9.54 8.149H.493L0 78.886c7.226-1.568 15.436-4.097 20.41-6.803c3.044-1.653 3.912-3.098 4.912-7.026L41.819 1.245H63.68l33.516 79.963z"
+                                    transform="matrix(1 0 0 -1 0 82.668)" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 128 128">
+                                <path fill="#252f3e"
+                                    d="M36.379 53.64c0 1.56.168 2.825.465 3.75c.336.926.758 1.938 1.347 3.032c.207.336.293.672.293.969c0 .418-.254.84-.8 1.261l-2.653 1.77c-.379.25-.758.379-1.093.379c-.422 0-.844-.211-1.266-.59a13.3 13.3 0 0 1-1.516-1.98a34 34 0 0 1-1.304-2.485q-4.924 5.813-12.38 5.813c-3.535 0-6.355-1.012-8.421-3.032c-2.063-2.023-3.114-4.718-3.114-8.086c0-3.578 1.262-6.484 3.833-8.671c2.566-2.192 5.976-3.286 10.316-3.286c1.43 0 2.902.125 4.46.336c1.56.211 3.161.547 4.845.926v-3.074c0-3.2-.676-5.43-1.98-6.734C26.061 32.633 23.788 32 20.546 32c-1.473 0-2.988.168-4.547.547a33.4 33.4 0 0 0-4.547 1.433c-.676.293-1.18.461-1.473.547c-.296.082-.507.125-.675.125c-.59 0-.883-.422-.883-1.304v-2.063c0-.676.082-1.18.293-1.476c.21-.293.59-.586 1.18-.883q2.21-1.137 5.304-1.895c2.063-.547 4.254-.8 6.57-.8c5.008 0 8.672 1.136 11.032 3.41c2.316 2.273 3.492 5.726 3.492 10.359v13.64Zm-17.094 6.403c1.387 0 2.82-.254 4.336-.758c1.516-.508 2.863-1.433 4-2.695c.672-.8 1.18-1.684 1.43-2.695c.254-1.012.422-2.23.422-3.665v-1.765a34 34 0 0 0-3.871-.719a32 32 0 0 0-3.961-.25c-2.82 0-4.883.547-6.274 1.684c-1.387 1.136-2.062 2.734-2.062 4.84c0 1.98.504 3.453 1.558 4.464c1.012 1.051 2.485 1.559 4.422 1.559m33.809 4.547c-.758 0-1.262-.125-1.598-.422c-.34-.254-.633-.84-.887-1.64L40.715 29.98c-.25-.843-.38-1.39-.38-1.687c0-.672.337-1.05 1.013-1.05h4.125c.8 0 1.347.124 1.644.421c.336.25.59.84.84 1.64l7.074 27.876l6.57-27.875c.208-.84.462-1.39.797-1.64c.34-.255.93-.423 1.688-.423h3.367c.8 0 1.348.125 1.684.422c.336.25.633.84.8 1.64l6.653 28.212l7.285-28.211c.25-.84.547-1.39.84-1.64c.336-.255.887-.423 1.644-.423h3.914c.676 0 1.055.336 1.055 1.051c0 .21-.043.422-.086.676s-.125.59-.293 1.05L80.801 62.57c-.254.84-.547 1.387-.887 1.64c-.336.255-.883.423-1.598.423h-3.62c-.801 0-1.348-.13-1.684-.422c-.34-.297-.633-.844-.801-1.684l-6.527-27.16l-6.485 27.117c-.21.844-.46 1.391-.8 1.684c-.337.297-.926.422-1.684.422Zm54.105 1.137c-2.187 0-4.379-.254-6.484-.758s-3.746-1.055-4.84-1.684c-.676-.379-1.137-.8-1.305-1.18a2.9 2.9 0 0 1-.254-1.18v-2.148c0-.882.336-1.304.97-1.304q.376 0 .757.129c.25.082.629.25 1.05.418a23 23 0 0 0 4.634 1.476c1.683.336 3.324.504 5.011.504c2.653 0 4.715-.465 6.145-1.39c1.433-.926 2.191-2.274 2.191-4c0-1.18-.379-2.145-1.136-2.946c-.758-.8-2.192-1.516-4.254-2.191l-6.106-1.895c-3.074-.969-5.348-2.398-6.734-4.293c-1.39-1.855-2.106-3.918-2.106-6.105q0-2.655 1.137-4.676a10.8 10.8 0 0 1 3.031-3.453c1.262-.965 2.696-1.684 4.38-2.188s3.452-.715 5.304-.715c.926 0 1.894.043 2.82.168c.969.125 1.852.293 2.738.461c.84.211 1.641.422 2.399.676q1.137.379 1.77.758c.59.336 1.011.672 1.261 1.05q.38.509.379 1.391v1.98c0 .884-.336 1.348-.969 1.348c-.336 0-.883-.171-1.597-.507q-3.604-1.641-8.086-1.641c-2.399 0-4.293.379-5.598 1.18c-1.309.797-1.98 2.02-1.98 3.746c0 1.18.421 2.191 1.261 2.988c.844.8 2.403 1.602 4.633 2.316l5.98 1.895c3.032.969 5.22 2.316 6.524 4.043s1.938 3.707 1.938 5.895c0 1.812-.38 3.453-1.094 4.882c-.758 1.434-1.77 2.696-3.074 3.707c-1.305 1.051-2.864 1.809-4.672 2.36c-1.895.586-3.875.883-6.024.883m0 0" />
+                                <path fill="#f90"
+                                    d="M118 73.348c-4.432.063-9.664 1.052-13.621 3.832c-1.223.883-1.012 2.062.336 1.894c4.508-.547 14.44-1.726 16.21.547c1.77 2.23-1.976 11.62-3.663 15.79c-.504 1.26.59 1.769 1.726.8c7.41-6.231 9.348-19.242 7.832-21.137c-.757-.925-4.388-1.79-8.82-1.726M1.63 75.859c-.927.116-1.347 1.236-.368 2.121c16.508 14.902 38.359 23.872 62.613 23.872c17.305 0 37.43-5.43 51.281-15.66c2.273-1.688.297-4.254-2.02-3.204c-15.534 6.57-32.421 9.77-47.788 9.77c-22.778 0-44.8-6.273-62.653-16.633c-.39-.231-.755-.304-1.064-.266z" />
+                            </svg>
+                        </div>
+                        <div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="0.85em" height="1em" viewBox="0 0 256 302">
+                                <path fill="#27346a"
+                                    d="M217.168 23.507C203.234 7.625 178.046.816 145.823.816h-93.52A13.39 13.39 0 0 0 39.076 12.11L.136 259.077c-.774 4.87 2.997 9.28 7.933 9.28h57.736l14.5-91.971l-.45 2.88c1.033-6.501 6.593-11.296 13.177-11.296h27.436c53.898 0 96.101-21.892 108.429-85.221c.366-1.873.683-3.696.957-5.477q-2.334-1.236 0 0c3.671-23.407-.025-39.34-12.686-53.765" />
+                                <path fill="#27346a"
+                                    d="M102.397 68.84a11.7 11.7 0 0 1 5.053-1.14h73.318c8.682 0 16.78.565 24.18 1.756a102 102 0 0 1 6.177 1.182a90 90 0 0 1 8.59 2.347c3.638 1.215 7.026 2.63 10.14 4.287c3.67-23.416-.026-39.34-12.687-53.765C203.226 7.625 178.046.816 145.823.816H52.295C45.71.816 40.108 5.61 39.076 12.11L.136 259.068c-.774 4.878 2.997 9.282 7.925 9.282h57.744L95.888 77.58a11.72 11.72 0 0 1 6.509-8.74" />
+                                <path fill="#2790c3"
+                                    d="M228.897 82.749c-12.328 63.32-54.53 85.221-108.429 85.221H93.024c-6.584 0-12.145 4.795-13.168 11.296L61.817 293.621c-.674 4.262 2.622 8.124 6.934 8.124h48.67a11.71 11.71 0 0 0 11.563-9.88l.474-2.48l9.173-58.136l.591-3.213a11.71 11.71 0 0 1 11.562-9.88h7.284c47.147 0 84.064-19.154 94.852-74.55c4.503-23.15 2.173-42.478-9.739-56.054c-3.613-4.112-8.1-7.508-13.327-10.28c-.283 1.79-.59 3.604-.957 5.477" />
+                                <path fill="#1f264f"
+                                    d="M216.952 72.128a90 90 0 0 0-5.818-1.49a110 110 0 0 0-6.177-1.174c-7.408-1.199-15.5-1.765-24.19-1.765h-73.309a11.6 11.6 0 0 0-5.053 1.149a11.68 11.68 0 0 0-6.51 8.74l-15.582 98.798l-.45 2.88c1.025-6.501 6.585-11.296 13.17-11.296h27.444c53.898 0 96.1-21.892 108.428-85.221c.367-1.873.675-3.688.958-5.477q-4.682-2.47-10.14-4.279a83 83 0 0 0-2.77-.865" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.43em" height="1em" viewBox="0 0 512 211">
+                                <path
+                                    d="M93.552 27.103c-6 7.1-15.602 12.702-25.203 11.901c-1.2-9.6 3.5-19.802 9.001-26.103C83.35 5.601 93.852.4 102.353 0c1 10.001-2.9 19.802-8.8 27.103m8.701 13.802c-13.902-.8-25.803 7.9-32.404 7.9c-6.7 0-16.802-7.5-27.803-7.3c-14.301.2-27.603 8.3-34.904 21.202c-15.002 25.803-3.9 64.008 10.601 85.01c7.101 10.401 15.602 21.802 26.803 21.402c10.602-.4 14.802-6.9 27.604-6.9c12.901 0 16.602 6.9 27.803 6.7c11.601-.2 18.902-10.4 26.003-20.802c8.1-11.801 11.401-23.303 11.601-23.903c-.2-.2-22.402-8.7-22.602-34.304c-.2-21.402 17.502-31.603 18.302-32.203c-10.002-14.802-25.603-16.402-31.004-16.802m80.31-29.004V167.82h24.202v-53.306h33.504c30.603 0 52.106-21.002 52.106-51.406c0-30.403-21.103-51.206-51.306-51.206zm24.202 20.403h27.903c21.003 0 33.004 11.201 33.004 30.903s-12.001 31.004-33.104 31.004h-27.803zM336.58 169.019c15.202 0 29.303-7.7 35.704-19.902h.5v18.702h22.403V90.21c0-22.502-18.002-37.004-45.706-37.004c-25.703 0-44.705 14.702-45.405 34.904h21.803c1.8-9.601 10.7-15.902 22.902-15.902c14.802 0 23.103 6.901 23.103 19.603v8.6l-30.204 1.8c-28.103 1.7-43.304 13.202-43.304 33.205c0 20.202 15.701 33.603 38.204 33.603m6.5-18.502c-12.9 0-21.102-6.2-21.102-15.702c0-9.8 7.901-15.501 23.003-16.401l26.903-1.7v8.8c0 14.602-12.401 25.003-28.803 25.003m82.01 59.707c23.603 0 34.704-9 44.405-36.304L512 54.706h-24.603l-28.503 92.11h-.5l-28.503-92.11h-25.303l41.004 113.513l-2.2 6.901c-3.7 11.701-9.701 16.202-20.402 16.202c-1.9 0-5.6-.2-7.101-.4v18.702c1.4.4 7.4.6 9.201.6" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.51em" height="1em" viewBox="0 0 512 204">
+                                <path fill="#5f6368"
+                                    d="M362.927 55.057c14.075 0 24.952 3.839 33.27 11.517c8.317 7.677 12.155 17.914 12.155 30.71v61.42h-17.914V144.63h-.64c-7.677 11.517-18.554 17.275-31.35 17.275c-10.877 0-20.474-3.2-28.151-9.597c-7.038-6.398-11.517-15.355-11.517-24.952q0-15.356 11.517-24.953c7.677-6.398 18.554-8.957 31.35-8.957c11.516 0 20.474 1.92 27.511 6.398v-4.478c0-5.972-2.229-11.943-6.688-15.834l-.99-.801c-5.118-4.479-11.516-7.038-18.553-7.038q-16.315 0-24.953 13.436L321.34 74.89c10.236-13.436 23.672-19.834 41.587-19.834M272.715 11.55c11.48 0 22.39 3.995 31.113 11.445l1.517 1.35c8.957 7.678 13.435 19.195 13.435 31.351s-4.478 23.033-13.435 31.35s-19.834 12.796-32.63 12.796l-30.71-.64v59.502H222.81V11.55zm92.77 97.25q-11.516 0-19.193 5.758q-7.678 4.798-7.678 13.435c0 5.119 2.56 9.597 6.398 12.157c4.479 3.199 9.597 5.118 14.716 5.118c7.165 0 14.331-2.787 19.936-7.84l1.177-1.117c6.398-5.758 9.597-12.796 9.597-20.474c-5.758-4.478-14.076-7.038-24.952-7.038m-91.49-79.336h-31.99V80.65h31.99c7.037 0 14.075-2.559 18.554-7.677c10.236-9.597 10.236-25.592.64-35.19l-.64-.64c-5.119-5.118-11.517-8.317-18.555-7.677M512 58.256l-63.34 145.235h-19.194l23.672-50.544l-41.587-94.051h20.474l30.07 72.297h.64l29.431-72.297H512z" />
+                                <path fill="#4285f4"
+                                    d="M165.868 86.407c0-5.758-.64-11.516-1.28-17.274H84.615v32.63h45.425c-1.919 10.236-7.677 19.833-16.634 25.592v21.113h27.511c15.995-14.715 24.952-36.469 24.952-62.06" />
+                                <path fill="#34a853"
+                                    d="M84.614 168.942c23.032 0 42.226-7.678 56.302-20.474l-27.511-21.113c-7.678 5.118-17.275 8.317-28.791 8.317c-21.754 0-40.948-14.715-47.346-35.189H9.118v21.753c14.715 28.791 43.506 46.706 75.496 46.706" />
+                                <path fill="#fbbc04"
+                                    d="M37.268 100.483c-3.838-10.237-3.838-21.753 0-32.63V46.1H9.118c-12.157 23.673-12.157 51.824 0 76.136z" />
+                                <path fill="#ea4335"
+                                    d="M84.614 33.304c12.156 0 23.672 4.479 32.63 12.796l24.312-24.312C126.2 7.712 105.727-.605 85.253.034c-31.99 0-61.42 17.915-75.496 46.706l28.151 21.753c5.758-20.474 24.952-35.189 46.706-35.189" />
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" class="department">
+                    <h4>Department</h4>
+                    <p><span>Fashion</span> <br>
+                        <span>Frozen Food</span> <br>
+                        <span>Beverages</span> <br>
+                        <span>Organic Grocery</span> <br>
+                        <span>Office Supplies</span> <br>
+                        <span>Beauty Products</span> <br>
+                        <span>Books</span> <br>
+                        <span>Organic Grocery</span> <br>
+                        <span>Office Supplies</span> <br>
+                        <span>Beauty Products</span> <br>
+                        <span>Books</span> <br>
+                        <span>Office Supplies</span> <br>
+                        <span>Beauty Products</span> <br>
+                        <span>Books</span> <br>
+                    </p>
+                </div>
+                <div data-aos="fade-up" class="about">
+                    <h4>About Us</h4>
+                    <p><span>Fashion</span> <br>
+                        <span>Frozen Food</span> <br>
+                        <span>Beverages</span> <br>
+                        <span>Organic Grocery</span> <br>
+                        <span>Office Supplies</span> <br>
+                        <span>Beauty Products</span> <br>
+                        <span>Books</span> <br>
+                    </p>
+                </div>
+                <div data-aos="fade-up" class="service">
+                    <h4>Services</h4>
+                    <p><span>Fashion</span> <br>
+                        <span>Frozen Food</span> <br>
+                        <span>Beverages</span> <br>
+                        <span>Organic Grocery</span> <br>
+                        <span>Office Supplies</span> <br>
+                        <span>Beauty Products</span> <br>
+                        <span>Books</span> <br>
+                        <span>Office Supplies</span> <br>
+                        <span>Beauty Products</span> <br>
+                        <span>Books</span> <br>
+                    </p>
+                </div>
+                <div data-aos="fade-up" class="help">
+                    <h4>Help</h4>
+                    <p><span>Fashion</span> <br>
+                        <span>Frozen Food</span> <br>
+                        <span>Beverages</span> <br>
+                        <span>Organic Grocery</span> <br>
+                        <span>Office Supplies</span> <br>
+                        <span>Beauty Products</span> <br>
+                        <span>Books</span> <br>
+                    </p>
+                </div>
+
+
+
+            </div>
+            <div class="finally-2">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                        <path fill="currentColor"
+                            d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z" />
+                    </svg>
+                    <span> The design is Inspired by Wissam Najjom developer</span>
+
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
+                        <g fill="currentColor">
+                            <path
+                                d="M15.55 10.51C14.93 9.92 13.693 9 12 9c-2.5 0-4 2-4 5c0 4 6.5 9 8 9s8-5 8-9c0-3-1.5-5-4-5c-1.694 0-2.93.919-3.55 1.51a.675.675 0 0 1-.9 0" />
+                            <path
+                                d="M1 8a3 3 0 0 1 3-3h24a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-.816.421l4.61 3.073a6.5 6.5 0 0 0-.663 1.962L3 9.702V22.36l5.874-3.738a17 17 0 0 0 1.31 1.537l-6.982 4.443A1 1 0 0 0 4 25h24a1 1 0 0 0 .798-.398l-6.983-4.443c.463-.483.908-1 1.311-1.537L29 22.36V9.702l-4.13 2.754a6.5 6.5 0 0 0-.664-1.962l4.61-3.073A1 1 0 0 0 28 7z" />
+                        </g>
+                    </svg>
+                    <span>Thanks to fakestoreapi for providing free fake api</span>
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M16.317 3.923q1.962 0 3.323 1.504T21 9.057q0 .624-.136 1.244t-.435 1.199h-5.173l-1.79-2.78h-.935l-1.677 5.126L9.256 11.5H3.57q-.298-.579-.435-1.19Q3 9.7 3 9.083Q3 6.93 4.348 5.427t3.31-1.504q1.026 0 1.974.418q.947.417 1.695 1.209l.673.712l.635-.673q.761-.812 1.718-1.239t1.964-.427m-4.342 16.604l-7.179-7.229q-.188-.188-.362-.387q-.173-.197-.317-.411H8.72l1.84 2.767h.93l1.657-5.151l1.592 2.384h5.139q-.144.208-.317.406t-.356.386z" />
+                    </svg>
+                    <span>This site is for training purposes</span>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="E-commerce.js"></script>
+
+</html>
+
+<style>
+
+div:where(.swal2-container).swal2-center>.swal2-popup {
+    grid-column: 2;
+    grid-row: 2;
+    place-self: center center;
+    background-color: #000;
+}
+
+div:where(.swal2-icon).swal2-warning {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+div:where(.swal2-container) h2:where(.swal2-title) {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: .8em 1em 0;
+    color: inherit;
+    font-size: 1.875em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+    word-wrap: break-word;
+    color: #ffffff;
+}
+div:where(.swal2-container) .swal2-html-container {
+    z-index: 1;
+    justify-content: center;
+    margin: 0;
+    padding: 1em 1.6em .3em;
+    overflow: auto;
+    color: inherit;
+    font-size: 1.125em;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #ffffff;
+}
+
+
+
+    @media(max-width:500px) {
+        div:where(.swal2-container) div:where(.swal2-popup) {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 100%);
+     width: 250px;
+    /* max-width: 100%; */
+    padding: 0 0 1.25em;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #545454;
+    font-family: inherit;
+    font-size: 12px;
+    
+
+
+}
+}
+
+
+</style>

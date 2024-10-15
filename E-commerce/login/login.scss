@@ -1,0 +1,252 @@
+// @use "";
+* {
+    font-family: sans-serif;
+}
+
+
+body {
+    height: 100vh;
+    background-color: #333533;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+form {
+
+
+    display: flex;
+    flex-direction: column;
+    background-color: #171717;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 10px 30px;
+    padding-bottom: 30px;
+
+
+    .heading {
+        color: #ffffff;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        gap: 2px;
+        outline: none;
+        border: none;
+        background-color: #171717;
+        padding: 13px 0px;
+        padding-right: 40px;
+        padding-left: 5px;
+        margin: 10px 0px;
+        box-shadow: inset 2px 5px 10px rgba(5, 5, 5);
+
+        .input-field {
+            color: #ffffff;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .input-icon {
+            height: 20px;
+            width: 22px;
+
+        }
+
+    }
+
+    .btn {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 50px;
+
+        .button1 {
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: #333533;
+            border-radius: 7px;
+            padding: 7px 30px;
+            border: none;
+            margin-bottom: 10px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #000;
+            }
+
+        }
+
+    }
+
+    .button3 {
+        cursor: pointer;
+
+        margin: auto;
+        letter-spacing: 0.5px;
+        font-size: 14px;
+        color: #ffffff;
+        background-color: #333533;
+        border-radius: 7px;
+        padding: 7px 20px;
+        width: 220px;
+        border: none;
+        margin-bottom: 10px;
+        transition: 0.3s;
+
+
+        &:hover {
+            background-color: #000;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:425px) {
+    form {
+        width: 70%;
+height: 350px;
+
+        .btn {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+    
+            .button1 {
+                cursor: pointer;
+                letter-spacing: 0.5px;
+                font-size: 14px;
+                color: #ffffff;
+                background-color: #333533;
+                border-radius: 7px;
+                padding: 7px 20px;
+                border: none;
+                margin-bottom: 10px;
+                transition: 0.3s;
+    
+                &:hover {
+                    background-color: #000;
+                }
+    
+            }
+    
+        }
+        .button3 {
+            cursor: pointer;
+
+            margin: 0px auto;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: #333533;
+            border-radius: 7px;
+            padding: 7px 20px;
+            width: 175px;
+            border: none;
+            margin-bottom: 10px;
+            transition: 0.3s;
+
+
+            &:hover {
+                background-color: #000;
+            }
+        }
+        .field {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            gap: 2px;
+            outline: none;
+            border: none;
+            background-color: #171717;
+            padding: 13px 0px;
+            padding-right: 40px;
+            padding-left: 5px;
+            margin: 10px 0px;
+            box-shadow: inset 2px 5px 10px rgba(5, 5, 5);
+    
+            .input-field {
+                color: #ffffff;
+                background: none;
+                border: none;
+                outline: none;
+                padding-left: 40px;
+            }
+    
+            .input-icon {
+                height: 20px;
+                width: 22px;
+    
+            }
+    
+        }
+    }
+
+}
+
+@media(min-width:767px) and (max-width:991px) {}
+
+@media(min-width:992px) and (max-width:1199px) {
+    form {
+        width: 26%;
+
+        .field {
+            .input-field {
+                width: 90%;
+
+            }
+        }
+    }
+}
+
+@media(min-width:1200px) {
+
+
+
+    form {
+        width: 25%;
+
+
+        .field {
+            .input-field {
+                width: 90%;
+
+            }
+
+
+
+        }
+
+    }
+}

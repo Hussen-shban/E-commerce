@@ -1,0 +1,178 @@
+#map {
+    width: 80%;
+    height: 600px;
+}
+
+
+body {
+    height: 100vh;
+    background-color: #EBEBEB;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+    overflow: hidden;
+
+
+
+}
+
+
+.dashboard {
+    z-index: 1;
+    color: #000;
+    height: 60px;
+    margin: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+    padding-right: 100px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+
+    svg {
+        fill: #000;
+        width: 100px;
+        height: 100px;
+    }
+
+    .home {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        svg {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        p {
+            padding: 5px;
+            position: relative;
+            top: 5px;
+            cursor: pointer;
+            border-bottom: solid 0px #ffffff;
+            transition: 0.1s;
+
+            &:hover {
+                border-bottom: solid 1px #ffffff;
+            }
+
+        }
+    }
+
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+
+
+    .left {
+        width: 40%;
+        font-size: 30px;
+
+        .time {
+            font-size: 22px;
+            background-color: #FFFFFF;
+            width: fit-content;
+            margin-top: 100px;
+            border: solid, 1px, #ffffff;
+            padding: 10px;
+
+        }
+
+    }
+
+    .right {
+
+        width: 60%;
+        width: 100vh;
+        overflow: hidden;
+
+        #map {
+            overflow: hidden;
+
+            height: 100vh;
+            width: 100%;
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:450px) {
+
+    .container {
+        width: 90%;
+        padding-top: 40px;
+        display: flex;
+        flex-flow: column;
+
+
+        .left {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            font-size: 30px;
+
+            .time {
+                background-color: #FFFFFF;
+                font-size: 22px;
+                width: 160px;
+                border: solid, 1px, #ffffff;
+
+            }
+
+            p {
+                overflow: hidden;
+            }
+
+        }
+
+        .right {
+
+            width: 100%;
+
+            #map {
+                height: 100vh;
+                width: 100%;
+
+            }
+
+        }
+    }
+
+}
+
